@@ -27,8 +27,10 @@ function setup(){
 
    umbrella = new Umbrella(200,500);
 
-   for(var i = 0; i < maxDrops; i++){
-       drop.push(new Drop(random(0,500),random(0,500)));
+   if(frameCount % 150 === 0){
+    for(var i = 0; i < maxDrops; i++){
+        drop.push(new Drop(random(0,500),random(0,500)));
+    }
    }
 }
 
